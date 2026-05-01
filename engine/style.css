@@ -3,6 +3,10 @@ upboard{
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgb(120, 120, 120);
+    background-color: rgb(190, 190, 190);
     color: black;
+}
+pgend{
+    width:100%;
+    background-color: rgb(190, 190, 190);
 }
