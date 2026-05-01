@@ -15,5 +15,6 @@ redbox{
     background-color: red;
     border-color: brown;
     color: white;
-    border: 5px;
+    border: 5px solid;
+    display: block;
 }
