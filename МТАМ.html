@@ -3,6 +3,9 @@
     <script src="engine/cookies.js"></script>
     <script>
         var genre="organisation" // сюда вставляем жанр
+        if (getcookie(genre)==NaN){
+            document.cookie=genre+"=0"
+        }
         function updgnrdt(){
             document.getElementById("rating").innerhtml=getcookie(genre)
         }
