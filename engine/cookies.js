@@ -1,4 +1,4 @@
-export function getcookie(name){
+function getcookie(name){
     cookies=decodeURIComponent(document.cookie).split(";")
     for(var i=0; i<cookies.lenght; i++){
         var cookie=cookies[0]
