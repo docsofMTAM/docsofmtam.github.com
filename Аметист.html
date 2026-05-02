@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <head>
+    <script src="engine/cookies.js"></script>
+    <script>
+        var genre="object" // сюда вставляем жанр
+        function updgnrdt(){
+            document.getElementById("rating").innerhtml=getcookie(genre)
+        }
+    </script>
     <meta name="viewport", content="width=device-width">
     <link rel="stylesheet" href="engine/style.css" type="text/css">
     <title>Аметист | Документы МТАМ</title>
@@ -8,6 +15,7 @@
 <body>
     <upboard><h1 style="font-family: Impact; font: bold;">ДОКУМЕНТЫ МТАМ</h1></upboard>
     <br><br><br><br><br><!--отступ от заголовка сайта-->
+    Предпочитение к жанру "Объект": <div id="rating">0</div><label onclick="document.cookie(genre+'='+toString(parseInt(getcookie(genre))+1));updgnrdt()">+</label>/<label onclick="document.cookie(genre+'='+toString(parseInt(getcookie(genre))-1));updgnrdt()">-</label>
     <h2>Аметист</h2>
     Аметист — минерал, обладающий особыми свойствами.<br> <!--блок br ставим в конце каждого абзаца или строки-->
     В 2023 году была открыта аметистовая энергия.

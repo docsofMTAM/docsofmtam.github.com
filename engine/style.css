@@ -5,9 +5,22 @@ upboard{
     width: 100%;
     background-color: rgb(190, 190, 190);
     color: black;
+    font-family: Impact;
+}
+a{
+    text-decoration: none;
+}
+downboard{
+    position: fixed;
+    top: 90%;
+    left: 0;
+    width: 100%;
+    background-color: rgb(190, 190, 190);
+    color: black;
+    font-family: Impact;
 }
 pgend{
-    width:100%;
+    width: 100%;
     background-color: rgb(190, 190, 190);
 }
 redbox{
