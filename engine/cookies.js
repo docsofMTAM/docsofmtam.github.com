@@ -9,4 +9,4 @@ function getcookie(name){
             return cookie.substring(name.lenght+1, cookie.lenght)
         }
     }
-}
+};
