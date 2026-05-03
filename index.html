@@ -13,7 +13,7 @@
         })
         var pglist=new Array()
         var lastelement=null;
-        arrapages.forEach((index,element) => {
+        pages.forEach((index,element) => {
             try{
             if(parseInt(getcookie(element.genre))>=parseInt(getcookie(lastelement.genre))){
                 pglist.unshift(element.name)
