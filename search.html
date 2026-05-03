@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <title>Поиск по вики</title>
+    <link rel="stylesheet" src="engine/cookies.js">
+    <script>
+    var pages;
+        fetch("https://docsofmtam.github.io/pages.json").then(Response =>Response.json()).then(data => {pages=data
+        var pglist=[];
+        var lastelement=null;
+        document.getElementById("search").addEventListener("input", (event)=>{
+        document.getElementById("results").innerHTML=""
+        for(var ii=0;ii<event.target.value-2; i++){
+        for (var i=0;i<pages.length;i++){
+            var element=pages[i]
+            var st=event.target.value.substring(ii,ii+2)
+            if (st in element && pglist.includes(event.target.value)!=false){
+                pglist.push(event.target.value)
+                document.getElementById("results").innerHTML=document.getElementById("results").innerHTML+"<a class='liten' href='"+event.target.value+"'>"+event.target.value+"</a>"
+            }
+        }}
+    })
+    })
+    </script>
+</head>
+<body>
+    <upboard><h1 style="font-family: Impact; font: bold;"><a href="index.html" style="color:black">ДОКУМЕНТЫ МТАМ</a></h1></upboard>
+    <br><br><br><br><br>
+    <textarea placeholder="запрос" id="search"></textarea>
+    <div id="results"></div>
+</body>
