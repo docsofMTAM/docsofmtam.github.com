@@ -7,12 +7,12 @@
      <script src="engine/cookies.js"></script>
     <script>
         //var genres=JSON.parse(fetch("https://docsofmtam.github.io/genres.json"))
-        var pages=null
+        var pages=undefined
         fetch("https://docsofmtam.github.io/pages.json").then(Response =>{
             pages=JSON.parse(Response.text)
         })
         var pglist=new Array()
-        var lastelement=null;
+        var lastelement=undefined;
         pages.forEach((index,element) => {
             try{
             if(parseInt(getcookie(element.genre))>=parseInt(getcookie(lastelement.genre))){
