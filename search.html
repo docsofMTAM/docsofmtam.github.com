@@ -7,14 +7,14 @@
         fetch("https://docsofmtam.github.io/pages.json").then(Response =>Response.json()).then(data => {pages=data
         var pglist=[];
         var lastelement=null;
-        document.getElementById("search").addEventListener("change", (event)=>{
+        document.getElementById("search").addEventListener("input", (event)=>{
         document.getElementById("results").innerHTML=""
         for (var i=0;i<pages.length;i++){
             var element=pages[i]
             //var st=event.target.value.substring(ii,ii+2)
-            if (element.name.includes(event.target.value) && pglist.includes(event.target.value)!=false){
+            if (element.name.includes(event.target.value)==true && pglist.includes(element.name)!=false){
                 pglist.push(event.target.value)
-                document.getElementById("results").innerHTML=document.getElementById("results").innerHTML+"<a class='liten' href='"+event.target.value+"'>"+event.target.value+"</a>"
+                document.getElementById("results").innerHTML=document.getElementById("results").innerHTML+"<a class='liten' href='"+element.name+"'>"+element.name+"</a>"
             }
         }
     })
