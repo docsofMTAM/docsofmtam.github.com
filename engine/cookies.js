@@ -19,4 +19,4 @@ function setcookie(cname, cvalue, exdays) {
   let expires = "expires="+d.toUTCString();
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
-//got from w3 site
+//got from w3s site
