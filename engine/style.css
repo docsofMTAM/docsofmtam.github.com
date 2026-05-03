@@ -20,6 +20,8 @@ button{
     background-color: rgb(230, 25, 25);
     border-radius: 0%;
     border:0px;
+    border:none;
+    color:white;
 }
 .litem{
     color:black;
