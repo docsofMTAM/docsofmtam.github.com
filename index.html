@@ -8,13 +8,13 @@
     <script>
         //var genres=JSON.parse(fetch("https://docsofmtam.github.io/genres.json"))
         var pages=new Array;
-        fetch("https://docsofmtam.github.io/pages.json").then(Response =>{
+        await fetch("https://docsofmtam.github.io/pages.json").then(Response =>{
             pages=Response.json()
         })
         var pglist=new Array()
         var lastelement=undefined;
         for (var i=0;i<pages.length;i++){
-            element=pages[i]
+            var element=pages[i]
             try{
             if(parseInt(getcookie(element.genre))>=parseInt(getcookie(lastelement.genre))){
                 pglist.unshift(element.name)
