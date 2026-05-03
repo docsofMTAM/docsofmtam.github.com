@@ -8,7 +8,7 @@
     <script>
         //var genres=JSON.parse(fetch("https://docsofmtam.github.io/genres.json"))
         var pages;
-        fetch("https://docsofmtam.github.io/pages.json").then(Response =>Response.json()).then(data => pages=data)
+        fetch("https://docsofmtam.github.io/pages.json").then(Response =>Response.json()).then(data => {pages=data
         var pglist=[];
         var lastelement=null;
         for (var i=0;i<pages.length;i++){
@@ -29,7 +29,7 @@
         for(var i=0; i<pglist.length; i++){
             recs=document.getElementById("recomendations")
             recs.innerHTML=recs.innerHTML+"<br/><a href='"+pglist[i]+"'>"+pglist[i]+"</a>"
-        }
+        }})
     </script>
 </head>
 <body>
