@@ -20,8 +20,9 @@
         function sendmsg(tk,chatid,author,name,content){
             var msg="author: "+author+"\n name: "+name+"\n content: "+content;
             msg=decodeURIComponent(msg);
+            msg=msg.replace("<","&lt")
             url="https://api.telegram.org/bot"+tk+"/sendMessage";
-            fetch(url,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({chat_id:chatid, text:msg, parse_mode:"TXT"})})
+            fetch(url,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({chat_id:chatid, text:msg, parse_mode:"HTML"})})
         }
         if (getcookie("pgtemplate")!=""){
             document.getElementById("content").value=decodeURIComponent(getcookie("pgtemplate"))
