@@ -9,7 +9,7 @@
         //var genres=JSON.parse(fetch("https://docsofmtam.github.io/genres.json"))
         var pages=null
         fetch("https://docsofmtam.github.io/pages.json").then(Response =>{
-            pages=JSON.parse(Response.json)
+            pages=JSON.parse(Response.text)
         })
         var pglist=new Array()
         var lastelement=null;
