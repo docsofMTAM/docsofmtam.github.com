@@ -7,12 +7,12 @@
      <script src="engine/cookies.js"></script>
     <script>
         //var genres=JSON.parse(fetch("https://docsofmtam.github.io/genres.json"))
-        var pages=new JSON;
+        var pages=new Array;
         fetch("https://docsofmtam.github.io/pages.json").then(Response =>{
             pages=Response.json()
         })
         var pglist=new Array()
-        var lastelement=JSON;
+        var lastelement=undefined;
         for (var i=0;i<pages.length;i++){
             element=pages[i]
             try{
