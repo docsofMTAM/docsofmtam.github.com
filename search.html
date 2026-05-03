@@ -13,7 +13,7 @@
         for (var i=0;i<pages.length;i++){
             var element=pages[i]
             var st=event.target.value.substring(ii,ii+2)
-            if (st in element.name && pglist.includes(event.target.value)!=false){
+            if (element.name.includes(st) && pglist.includes(event.target.value)!=false){
                 pglist.push(event.target.value)
                 document.getElementById("results").innerHTML=document.getElementById("results").innerHTML+"<a class='liten' href='"+event.target.value+"'>"+event.target.value+"</a>"
             }
