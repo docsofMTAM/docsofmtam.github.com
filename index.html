@@ -4,11 +4,37 @@
     <link rel="stylesheet" href="engine/style.css" type="text/css">
     <title>главная страница | Документы МТАМ</title>
     <!-- в блок title ставим название статьи перед |-->
+     <script src="engine/cookies.js"></script>
+    <script>
+        var genres=JSON.parse(fetch("https://docsofmtam.github.io/genres.json"))
+        var pages=JSON.parse(fetch("https://docsofmtam.github.io/pages.json"))
+        var pglist=new Array()
+        var lastelement=null;
+        pages.forEach(element => {
+            try{
+            if(parseInt(getcookie(element.genre))>=parseInt(getcookie(lastelement.genre))){
+                pglist.unshift(element.name)
+            }
+            else{
+                pglist.push(element.name)
+            }
+            }
+            catch(err){
+                pglist.push(element.name)
+            }
+            var lastelement=element
+        });
+        for(var i=0; i<pglist.length; i++){
+            recs=document.getElementById("recomendations")
+            recs.innerHTML=recs.innerHTML+"<br/><a href='"+pglist[i]+"'>"+pglist[i]+"</a>"
+        }
+    </script>
 </head>
 <body>
-        <upboard><h1 style="font-family: Impact; font: bold;">ДОКУМЕНТЫ МТАМ</h1></upboard>
+    <upboard><h1 style="font-family: Impact; font: bold;"><a href="index.html">ДОКУМЕНТЫ МТАМ</a></h1></upboard>
     <br><br><br><br><br><!--отступ от заголовка сайта-->
     <h2>ДОБРО ПОЖАЛОВАТЬ!</h2>
+    <div id="recomendations"></div>
     навигация по вики: <a href="Манго.html">Манго</a>, <a href="Аметист.html">Аметист</a>, <a href="Стекловата.html">Стекловата</a>, <a href="МТАМ.html">МТАМ</a>
     Хотите внести правку или создать свою статью? Пишите в наш телеграм-бот! <br/>
     @MTAMwiki_bot
