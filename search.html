@@ -2,6 +2,12 @@
 <head>
     <title>Поиск по вики</title>
     <link rel="stylesheet" href="engine/style.css">
+</head>
+<body>
+    <upboard><h1 style="font-family: Impact; font: bold;"><a href="index.html" style="color:black">ДОКУМЕНТЫ МТАМ</a></h1></upboard>
+    <br><br><br><br><br>
+    <textarea placeholder="запрос" id="search"></textarea>
+    <div id="results"></div>
     <script>
     var pages;
         fetch("https://docsofmtam.github.io/pages.json").then(Response =>Response.json()).then(data => {pages=data
@@ -20,10 +26,4 @@
     })
     })
     </script>
-</head>
-<body>
-    <upboard><h1 style="font-family: Impact; font: bold;"><a href="index.html" style="color:black">ДОКУМЕНТЫ МТАМ</a></h1></upboard>
-    <br><br><br><br><br>
-    <textarea placeholder="запрос" id="search"></textarea>
-    <div id="results"></div>
 </body>
