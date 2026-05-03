@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+    <script src="engine/cookies.js"></script>
+    <script>
+        var genre="organisation" // сюда вставляем жанр
+        if (getcookie(genre)==NaN || getcookie(genre)=="NaN" || getcookie(genre)==""){
+            document.cookie=genre+"=0"
+        }
+        function updgnrdt(){
+            document.getElementById("rating").innerHTML=getcookie(genre)
+        }; updgnrdt()
+    </script>
+    <meta name="viewport", content="width=device-width">
+    <link rel="stylesheet" href="engine/style.css" type="text/css">
+    <title>Группа стекловатного реагирования | Документы МТАМ</title>
+    <!-- в блок title ставим название статьи перед |-->
+</head>
+<body>
+        <upboard><h1 style="font-family: Impact; font: bold;"><a href="index.html" style="color:black">ДОКУМЕНТЫ МТАМ</a></h1></upboard>
+    <br><br><br><br><br><!--отступ от заголовка сайта-->
+    предпочтение к жанру "Организация": <div id="rating">0</div><label onclick="setcookie(genre,parseInt(parseInt(getcookie(genre))+1).toString());updgnrdt()">+</label>/<label onclick="setcookie(genre,parseInt(parseInt(getcookie(genre))-1).toString());updgnrdt()">-</label>
+    <h2>Группа стекловатного реагирования</h2>
+    Группа стекловатного реагирования — организация, целью которой является сдерживание события, именуемого "Стекловатный день"
+    <h3>Деятельность</h3>
+    Организация постоянно следит за серверами видеоигры "Minecraft", на каждом из открытых и некоторых закрытых серверах присутствуют представители организации. Кроме того, имеются представители под прикрытием в Mojang Studios и Microsoft Corporation<br/>
+    При обнаружении стекловатной руды представители должны не допустить её утечки из игры, окружив её аметистовыми блоками и вскопав её.<br/>
+    <pgend>автор - KecoBcTaBpo</pgend>
+</body>

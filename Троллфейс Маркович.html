@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <script src="engine/cookies.js"></script>
+    <script>
+        var genre="human" // сюда вставляем жанр
+        if (getcookie(genre)==NaN || getcookie(genre)=="NaN" || getcookie(genre)==""){
+            document.cookie=genre+"=0"
+        }
+        function updgnrdt(){
+            document.getElementById("rating").innerHTML=getcookie(genre)
+        }; updgnrdt()
+    </script>
+    <meta name="viewport", content="width=device-width">
+    <link rel="stylesheet" href="engine/style.css" type="text/css">
+    <title>Троллфейс Маркович | Документы МТАМ</title>
+    <!-- в блок title ставим название статьи перед |-->
+</head>
+<body>
+        <upboard><h1 style="font-family: Impact; font: bold;"><a href="index.html" style="color:black">ДОКУМЕНТЫ МТАМ</a></h1></upboard>
+    <br><br><br><br><br><!--отступ от заголовка сайта-->
+    предпочтение к жанру "Личность": <div id="rating">0</div><label onclick="setcookie(genre,parseInt(parseInt(getcookie(genre))+1).toString());updgnrdt()">+</label>/<label onclick="setcookie(genre,parseInt(parseInt(getcookie(genre))-1).toString());updgnrdt()">-</label>
+    <h2>Троллфейс Маркович</h2>
+    Троллфейс Маркович — важная личность в обществе <a href="МТАМ.html">МТАМ</a>.<br> <!--блок br ставим в конце каждого абзаца или строки-->
+    Родился 14 марта 1925 года в Ост-о-Бург(современный Отсо-сити), Уния Королевства Эщкерия и Империи Посхалко.
+    <h3>Биография</h3>
+    Детство провел в п.Молочном у своей бабушки, так как его родители редко бывали дома. В 1943 году окончил школу на отличие и пошел в армию. Служил в 78 Медно-Быковской бригаде, известную тем, что её постоянно звали для объяснения чего-либо. Из-за этого у юноши развился интерес к науке, и в 1948 году он поступил в Меднобыковский Городской Университет. Там он познакомился со своей будущей женой.
+    <h4>МТАТ</h4>
+    В 1967 году Троллфейс начал свою независимую деятельность. В течение 2 лет он изучал <a href="Манго.html">манго</a>, пока в 1969 году не сделал величайшее открытие, изменившее весь мир. Он открыл силу манго. Благодаря этому открытию он стал знаменитым, что помогло ему расширить общество до масштабов современного МТАМ.
+    <br>
+    <pgend>автор - ник автора</pgend>
+</body>

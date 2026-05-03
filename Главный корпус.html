@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <script src="engine/cookies.js"></script>
+    <script>
+        var genre="place" // сюда вставляем жанр
+        if (getcookie(genre)==NaN || getcookie(genre)=="NaN" || getcookie(genre)==""){
+            document.cookie=genre+"=0"
+        }
+        function updgnrdt(){
+            document.getElementById("rating").innerHTML=getcookie(genre)
+        }; updgnrdt()
+    </script>
+    <meta name="viewport", content="width=device-width">
+    <link rel="stylesheet" href="engine/style.css" type="text/css">
+    <title>Главный корпус МТАМ | Документы МТАМ</title>
+    <!-- в блок title ставим название статьи перед |-->
+</head>
+<body>
+        <upboard><h1 style="font-family: Impact; font: bold;"><a href="index.html" style="color:black">ДОКУМЕНТЫ МТАМ</a></h1></upboard>
+    <br><br><br><br><br><!--отступ от заголовка сайта-->
+    предпочтение к жанру "Место": <div id="rating">0</div><label onclick="setcookie(genre,parseInt(parseInt(getcookie(genre))+1).toString());updgnrdt()">+</label>/<label onclick="setcookie(genre,parseInt(parseInt(getcookie(genre))-1).toString());updgnrdt()">-</label>
+    <h2>Главный корпус МТАМ</h2>
+    Главный корпус <a href="МТАМ.html">МТАМ</a> — строение, расположенное в Отсо-сити, Эщкерия.<br> <!--блок br ставим в конце каждого абзаца или строки-->
+    <h3>Описание</h3>
+    Главный корпус МТАМ выглядит, как обычное строение, выполняющее роль ВУЗ-я. В принципе, данное здание им и является. Этажей всего 4, но, кроме них, присутствуют минусовые этажи. Известно, что на -9 этаже присутствует портал в Закулисье. <br/>
+    Всё здание снаружи покрыто отражающей прозрачной поверхностью, выполняющей роль окон. На крыше здания расположены 4 буквы: М, Т, А, М. Площадь здания приблизительно составляет 325м².
+    <h3>Люди</h3>
+    Троллфейс Маркович — основатель организации, при которой стоит здание. На данный момент находится на должности директора.<br>
+    к.Куки 1 — генеральный директор МТАМ и, следовательно, глава здания.<br>
+    Джокер Горчичный — глава кафедры физики.<br>
+    Марк Джокерович — глава кафедры биологии.<br>
+    Ч Друнский — глава кафедры географии.<br>
+    <br/>
+    <pgend>автор - KecoBcTaBpo</pgend>
+</body>
