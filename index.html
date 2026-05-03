@@ -13,7 +13,8 @@
         })
         var pglist=new Array()
         var lastelement=undefined;
-        pages.forEach((index,element) => {
+        for (var i=0;i<pages.length;i++){
+            element=pages[i]
             try{
             if(parseInt(getcookie(element.genre))>=parseInt(getcookie(lastelement.genre))){
                 pglist.unshift(element.name)
@@ -26,7 +27,7 @@
                 pglist.push(element.name)
             }
             var lastelement=element
-        });
+        };
         for(var i=0; i<pglist.length; i++){
             recs=document.getElementById("recomendations")
             recs.innerHTML=recs.innerHTML+"<br/><a href='"+pglist[i]+"'>"+pglist[i]+"</a>"
