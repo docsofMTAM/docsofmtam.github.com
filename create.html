@@ -18,7 +18,7 @@
     <br/><br/><br/><br/><br/>
     <textarea placeholder="Название статьи" id="name"></textarea><br/>
     <textarea placeholder="Автор" id="author"></textarea><br/>
-    <button>Изображение</button><button>Заголовок раздела</button><button>Заголовок подраздела</button><br/>
+    <button onclick="document.getElementById('content').value=document.getElementById('content').value+'<img src=ссылка в кавычках>'">Изображение</button><button onclick="document.getElementById('content').value=document.getElementById('content').value+'<h3>заголовок раздела</h3>'">Заголовок раздела</button><button onclick="document.getElementById('content').value=document.getElementById('content').value+'<h4>заголовок подраздела</h4>'">Заголовок подраздела</button><br/>
     <textarea placeholder="Содержимое(html)" id="content"></textarea>
     <button onclick="sendmsg(tk, chatid, document.getElementById('author').value, document.getElementById('name').value, document.getElementById('content').value)" width="100%">Отправить на рассмотрение</button><br>
     Для жителей России советуем отправлять статью со включенным ВПН, так как в ином случае статья может не прийти к нам на рассмотрение через Telegram
