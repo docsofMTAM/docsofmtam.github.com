@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+    <title>Создание статьи</title>
+    <script src="engine/b.js"></script>
+    <script>
+        var tk=nod();
+        chatid=-1003826355017;
+        function sendmsg(tk,chatid,author,name,content){
+            msg="author: "+author+"\n name: "+name+"\n content: "+content
+            url="https://api.telegram.org/bot"+tk+"/sendMessage"
+            fetch(url,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({chat_id:chatid, text:msg, parse_mode:"txt"})})
+        }
+    </script>
+    <link rel="stylesheet" href="engine/style.css">
+</head>
+<body>
+    <upboard><h1 style="font-family: Impact; font: bold;"><a href="index.html" style="color:black">ДОКУМЕНТЫ МТАМ</a></h1></upboard>
+    <br/><br/><br/><br/><br/>
+    <textarea placeholder="Название статьи" id="name"></textarea><br/>
+    <textarea placeholder="Автор" id="author"></textarea><br/>
+    <button>Изображение</button><button>Заголовок раздела</button><button>Заголовок подраздела</button><br/>
+    <textarea placeholder="Содержимое(html)" id="content"></textarea>
+    <button onclick="sendmsg(tk, chatid, document.getElementById('author').value, document.getElementById('name').value, document.getElementById('content').value)" width="100%">Отправить на рассмотрение</button><br>
+    Для жителей России советуем отправлять статью со включенным ВПН, так как в ином случае статья может не прийти к нам на рассмотрение через Telegram
+</body>

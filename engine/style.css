@@ -10,6 +10,21 @@ upboard{
 a{
     text-decoration: none;
 }
+textarea{
+    background-color: rgb(190, 190, 190);
+    border-radius: 0%;
+}
+button{
+    textarea{
+    background-color: rgb(230, 25, 25);
+    border-radius: 0%;
+}
+}
+.litem{
+    color:black;
+    background-color: rgb(230,230,230);
+    width: 100%;
+}
 downboard{
     position: fixed;
     top: 90%;

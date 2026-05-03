@@ -28,16 +28,18 @@
         };
         for(var i=0; i<pglist.length; i++){
             recs=document.getElementById("recomendations")
-            recs.innerHTML=recs.innerHTML+"<br/><a href='"+pglist[i]+"'>"+pglist[i]+"</a>"
+            recs.innerHTML=recs.innerHTML+"<br/><a class='litem' href='"+pglist[i]+"'>"+pglist[i]+"</a>"
         }})
     </script>
 </head>
 <body>
     <upboard><h1 style="font-family: Impact; font: bold;"><a href="index.html" style="color:black">ДОКУМЕНТЫ МТАМ</a></h1></upboard>
     <br><br><br><br><br><!--отступ от заголовка сайта-->
+    <button onclick="window.location.href='create.html'">написать статью</button>
     <h2>ДОБРО ПОЖАЛОВАТЬ!</h2>
+    <h3>Список статей, отобранный по вашим предпочтениям:</h3>
     <div id="recomendations"></div>
-    навигация по вики: <a href="Манго.html">Манго</a>, <a href="Аметист.html">Аметист</a>, <a href="Стекловата.html">Стекловата</a>, <a href="МТАМ.html">МТАМ</a>
-    Хотите внести правку или создать свою статью? Пишите в наш телеграм-бот! <br/>
+    <!--навигация по вики: <a href="Манго.html">Манго</a>, <a href="Аметист.html">Аметист</a>, <a href="Стекловата.html">Стекловата</a>, <a href="МТАМ.html">МТАМ</a>-->
+    Хотите внести правку? Пишите в наш телеграм-бот! <br/>
     @MTAMwiki_bot
 </body>
