@@ -3,7 +3,7 @@
     <script src="engine/cookies.js"></script>
     <script>
         var genre="object" // сюда вставляем жанр
-        if (getcookie(genre)==NaN || getcookie(genre)=="NaN"){
+        if (getcookie(genre)==NaN || getcookie(genre)=="NaN" || getcookie(genre)==""){
             document.cookie=genre+"=0"
         }
         function updgnrdt(){
