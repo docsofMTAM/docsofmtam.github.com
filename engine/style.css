@@ -23,6 +23,9 @@ button{
     border:none;
     color:white;
 }
+button:hover{
+    background-color: brown;
+}
 .litem{
     color:black;
     background-color: rgb(230,230,230);
