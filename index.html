@@ -6,8 +6,11 @@
     <!-- в блок title ставим название статьи перед |-->
      <script src="engine/cookies.js"></script>
     <script>
-        var genres=JSON.parse(fetch("https://docsofmtam.github.io/genres.json"))
-        var pages=JSON.parse(fetch("https://docsofmtam.github.io/pages.json"))
+        //var genres=JSON.parse(fetch("https://docsofmtam.github.io/genres.json"))
+        var pages=null
+        fetch("https://docsofmtam.github.io/pages.json").then(Response =>{
+            pages=JSON.parse(Response)
+        })
         var pglist=new Array()
         var lastelement=null;
         pages.forEach(element => {
@@ -31,7 +34,7 @@
     </script>
 </head>
 <body>
-    <upboard><h1 style="font-family: Impact; font: bold;"><a href="index.html">ДОКУМЕНТЫ МТАМ</a></h1></upboard>
+    <upboard><h1 style="font-family: Impact; font: bold;"><a href="index.html" style="color:black">ДОКУМЕНТЫ МТАМ</a></h1></upboard>
     <br><br><br><br><br><!--отступ от заголовка сайта-->
     <h2>ДОБРО ПОЖАЛОВАТЬ!</h2>
     <div id="recomendations"></div>
