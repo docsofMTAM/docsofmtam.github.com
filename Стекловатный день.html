@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+    <script src="engine/cookies.js"></script>
+    <script>
+        var genre="event" // сюда вставляем жанр
+        if (getcookie(genre)==NaN || getcookie(genre)=="NaN" || getcookie(genre)==""){
+            document.cookie=genre+"=0"
+        }
+        function updgnrdt(){
+            document.getElementById("rating").innerHTML=getcookie(genre)
+        }; updgnrdt()
+    </script>
+    <meta name="viewport", content="width=device-width">
+    <link rel="stylesheet" href="engine/style.css" type="text/css">
+    <title>Стекловатный день | Документы МТАМ</title>
+    <!-- в блок title ставим название статьи перед |-->
+</head>
+<body>
+        <upboard><h1 style="font-family: Impact; font: bold;"><a href="index.html" style="color:black">ДОКУМЕНТЫ МТАМ</a></h1></upboard>
+    <br><br><br><br><br><!--отступ от заголовка сайта-->
+    предпочтение к жанру "Событие": <div id="rating">0</div><label onclick="setcookie(genre,parseInt(parseInt(getcookie(genre))+1).toString());updgnrdt()">+</label>/<label onclick="setcookie(genre,parseInt(parseInt(getcookie(genre))-1).toString());updgnrdt()">-</label>
+    <h2>Стекловатный день</h2>
+    Стекловатный день — событие, которое должно было произойти 21 декабря 2012 года.<br> <!--блок br ставим в конце каждого абзаца или строки-->
+    <h3>Ход событий</h3>
+    В день события на одном из серверов видеоигры Minecraft должна появиться стекловатная руда. Все игроки, проходившие в радиусе 69 блоков от стекловатной руды, становятся "зараженными" неким компьютерным вирусом, который распространяет очаги стекловатных руд по другим мирам. Через 24 часа после появления первого очага компьютеры резко лишаются доступа в интернет, а динамики перестают работать. На самом деле, динамики продолжают работать, излучая инфразвук, разбивающий стекла. Через час процессор начинает стремительно повышать температуру, но охлаждение перестает работать. В итоге, все кремниевые компоненты платы компьютера превращаются в стекло. Из-за того, что по всему миру объём стекла увеличится, коэффициент аметиста сильно понизится, вызвав катастрофу, характеризующуюся изменением кристаллической решетки всех аметистов мира на кристаллическую решетку незакаленного стекла. Все аметисты пропадут, что приведет к масштабным нарушениям в МТАМ механике.
+    <br>
+    <pgend>автор - KecoBcTaBpo</pgend>
+</body>
