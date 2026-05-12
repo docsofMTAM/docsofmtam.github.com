@@ -1,1 +1,34 @@
-нет
+<!DOCTYPE html>
+<head>
+    <script src="engine/cookies.js"></script>
+    <script>
+        var genre="fool" // сюда вставляем жанр
+        if (getcookie(genre)==NaN || getcookie(genre)=="NaN" || getcookie(genre)==""){
+            document.cookie=genre+"=0"
+        }
+        function updgnrdt(){
+            document.getElementById("rating").innerHTML=getcookie(genre)
+        }; updgnrdt()
+    </script>
+    <meta name="viewport", content="width=device-width">
+    <link rel="stylesheet" href="engine/style.css" type="text/css">
+    <title>Нет | Документы МТАМ</title>
+    <!-- в блок title ставим название статьи перед |-->
+</head>
+<body>
+        <upboard><h1 style="font-family: Impact; font: bold;"><a href="index.html" style="color:black">ДОКУМЕНТЫ МТАМ</a></h1></upboard>
+    <br><br><br><br><br><!--отступ от заголовка сайта-->
+    предпочтение к жанру (сюда название жанра): <div id="rating">0</div><label onclick="setcookie(genre,parseInt(parseInt(getcookie(genre))+1).toString());updgnrdt()">+</label>/<label onclick="setcookie(genre,parseInt(parseInt(getcookie(genre))-1).toString());updgnrdt()">-</label>
+    <h2>Нет</h2>
+    Нет — нет<br> <!--блок br ставим в конце каждого абзаца или строки-->
+<h3>Нет</h3>
+Нет
+<h3>Нет</h3>
+Нет
+<h3>Нет</h3>
+Нет<br/>
+<!-- да? -->
+Нет
+    <br>
+    <pgend>автор - KecoBcTaBpo</pgend>
+</body>
