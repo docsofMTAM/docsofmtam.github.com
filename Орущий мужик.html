@@ -2,7 +2,7 @@
 <head>
     <script src="engine/cookies.js"></script>
     <script>
-        var genre="object" // сюда вставляем жанр
+        var genre="human" // сюда вставляем жанр
         if (getcookie(genre)==NaN || getcookie(genre)=="NaN" || getcookie(genre)==""){
             document.cookie=genre+"=0"
         }
@@ -12,15 +12,20 @@
     </script>
     <meta name="viewport", content="width=device-width">
     <link rel="stylesheet" href="engine/style.css" type="text/css">
-    <title>ШАБЛОН ДЛЯ АДМИНОВ | Документы МТАМ</title>
+    <title>Орущий мужик | Документы МТАМ</title>
     <!-- в блок title ставим название статьи перед |-->
 </head>
 <body>
         <upboard><h1 style="font-family: Impact; font: bold;"><a href="index.html" style="color:black">ДОКУМЕНТЫ МТАМ</a></h1></upboard>
     <br><br><br><br><br><!--отступ от заголовка сайта-->
     предпочтение к жанру "Личность": <div id="rating">0</div><label onclick="setcookie(genre,parseInt(parseInt(getcookie(genre))+1).toString());updgnrdt()">+</label>/<label onclick="setcookie(genre,parseInt(parseInt(getcookie(genre))-1).toString());updgnrdt()">-</label>
-    <h2>Название статьи</h2>
-    Манго — важнейший объект в МТАМ механике.<br> <!--блок br ставим в конце каждого абзаца или строки-->
-    <br>:)
-    <pgend>автор - ник автора</pgend>
+    <h2>Орущий мужик</h2>
+    Орущий мужик, ещё известный, как сигма — легендарный философ, основатель движения Σ.<br>
+<h3>Биография</h3>
+Родился 23 октября 1962 года. С детства его тянуло к философии жизни, в 8 лет был отдан на обучение <a href="Троллфейс Маркович">Троллфейсу Марковичу</a>. В 18 лет, окончив академию МТАМ, он начал свою деятельность в её стенах. Сначала он создал свой корпус Σ(ему, как отличнику, было дозволено создавать свои корпуса), но, изучая философию и психологию, он создал движение Σ — движение людей, не подчиняющихся под эффект толпы и имеющих собственное, адекватное мнение на фоне неадекватного мнения общества.<br/>
+<h3>«Ваша честь, прошу учесть<br>
+чем гуще лес — шкебеде доп доп ес ес» — орущий мужик про скибиди толчки, 2023</h3>
+ <!--блок br ставим в конце каждого абзаца или строки-->
+    <br>
+    <pgend>автор - KecoBcTaBpo</pgend>
 </body>
