@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'Impact'; 
+    src: url('../engine/Impact.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
 upboard{
     position: fixed;
     top: 0;
@@ -7,6 +13,7 @@ upboard{
     color: black;
     font-family: Impact;
 }
+
 a{
     text-decoration: none;
 }
