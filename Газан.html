@@ -1,1 +1,29 @@
-<!Doctype HTML<
+<!DOCTYPE html>
+<head>
+    <script src="engine/cookies.js"></script>
+    <script>
+        var genre="human" // сюда вставляем жанр
+        if (getcookie(genre)==NaN || getcookie(genre)=="NaN" || getcookie(genre)==""){
+            document.cookie=genre+"=0"
+        }
+        function updgnrdt(){
+            document.getElementById("rating").innerHTML=getcookie(genre)
+        }; updgnrdt()
+    </script>
+    <meta name="viewport", content="width=device-width">
+    <link rel="stylesheet" href="engine/style.css" type="text/css">
+    <title>Газан | Документы МТАМ</title>
+    <!-- в блок title ставим название статьи перед |-->
+</head>
+<body>
+        <upboard><h1 style="font-family: Impact; font: bold;"><a href="index.html" style="color:black">ДОКУМЕНТЫ МТАМ</a></h1></upboard>
+    <br><br><br><br><br><!--отступ от заголовка сайта-->
+    предпочтение к жанру "Личность": <div id="rating">0</div><label onclick="setcookie(genre,parseInt(parseInt(getcookie(genre))+1).toString());updgnrdt()">+</label>/<label onclick="setcookie(genre,parseInt(parseInt(getcookie(genre))-1).toString());updgnrdt()">-</label>
+    <h2>Газан</h2>
+Газан - двоюродный брат Троллфейса Марковича, профессор в корпусе 67
+<h3>Биография</h3>
+Газан Черемшин (1969- сейчас) - двоюродный брат Троллфейса Марковича по линии отца. С детства он рос нестандартно, можно сказать был вундеркиндом. В 7 лет родители отдали его в музыкальную школу, где он играл на флейте - фимозике. В 14 лет он начал активно общаться с Троллфейсом марковичем, и позже вступил в его академию. Он вы учился на 5, благодаря его острому уму. После окончания, он изучал свойства манго и ему подобных. После открытия слова "почему", он выдвинул теорию о каком-то числе, что даёт настройки всему в реальности. Многие его поддержали, и он начал независимое изучение. Потом он открыл 67, и доказал теорию, что число 67 есть везде, и тайно связано со свойствами манго. Так же он ударился в музыку и стал известным исполнителем. Сейчас Газан Черемшин изучает мощность слова "Почему", и предполагает, что оно напрямую связано с 67.
+</body>.<br> <!--блок br ставим в конце каждого абзаца или строки-->
+    <br>:)
+    <pgend>автор - Energyblame</pgend>
+</body>
